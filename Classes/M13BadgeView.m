@@ -155,6 +155,15 @@
 
 - (void)autoSetBadgeFrame
 {
+    BOOL autoSetFrame = YES;
+    if (self.delegate && [self.delegate respondsToSelector:@selector(badgeViewShouldAutoUpdateFrame:)]) {
+        autoSetFrame = [self.delegate badgeViewShouldAutoUpdateFrame:self];
+    }
+
+    if (!autoSetFrame) {
+        return;
+    }
+
     CGRect frame = self.frame;
     
     //Get the width for the current string
