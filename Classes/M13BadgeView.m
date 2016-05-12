@@ -497,7 +497,7 @@
 #pragma mark - Private
 
 - (void)hideForZeroIfNeeded{
-    self.hidden = ([_text isEqualToString:@"0"] && _hidesWhenZero);
+    self.hidden = ((_text == nil || _text.length == 0 || [_text isEqualToString:@"0"]) && _hidesWhenZero);
 }
 
 @end
