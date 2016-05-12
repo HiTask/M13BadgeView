@@ -261,6 +261,9 @@
 {
     [super layoutSubviews];
     //Update the frames of the layers
+    
+    [self autoSetBadgeFrame];
+    
     CGRect textFrame;
     if (_pixelPerfectText) {
         CGFloat roundScale = 1 / [UIScreen mainScreen].scale;
@@ -304,8 +307,9 @@
             textLayer.string = text;
         }
     }
+    
     //Update the frame
-    [self autoSetBadgeFrame];
+    [self setNeedsLayout];
     
     //Hide badge if text is zero
     [self hideForZeroIfNeeded];
@@ -323,7 +327,7 @@
     textLayer.fontSize = font.pointSize;
     textLayer.font = (__bridge CFTypeRef)(font.fontName);
     //Frame size needs to be changed to match the new font
-    [self autoSetBadgeFrame];
+    [self setNeedsLayout];
 }
 
 - (void)setAnimateChanges:(BOOL)animateChanges
@@ -377,25 +381,25 @@
 - (void)setHorizontalAlignment:(M13BadgeViewHorizontalAlignment)horizontalAlignment
 {
     _horizontalAlignment = horizontalAlignment;
-    [self autoSetBadgeFrame];
+    [self setNeedsLayout];
 }
 
 - (void)setVerticalAlignment:(M13BadgeViewVerticalAlignment)verticalAlignment
 {
     _verticalAlignment = verticalAlignment;
-    [self autoSetBadgeFrame];
+    [self setNeedsLayout];
 }
 
 - (void)setAlignmentShift:(CGSize)alignmentShift
 {
     _alignmentShift = alignmentShift;
-    [self autoSetBadgeFrame];
+    [self setNeedsLayout];
 }
 
 - (void)setMinimumWidth:(CGFloat)minimumWidth
 {
     _minimumWidth = minimumWidth;
-    [self autoSetBadgeFrame];
+    [self setNeedsLayout];
 }
 
 - (void)setMaximumWidth:(CGFloat)maximumWidth
@@ -404,7 +408,7 @@
         maximumWidth = self.frame.size.height;
     }
     _maximumWidth = maximumWidth;
-    [self autoSetBadgeFrame];
+    [self setNeedsLayout];
     [self setNeedsDisplay];
 }
 
