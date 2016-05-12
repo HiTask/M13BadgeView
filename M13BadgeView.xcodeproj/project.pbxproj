@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		A774C2F71CE41C3A00926BA2 /* UIView+M13BadgeView.m in Sources */ = {isa = PBXBuildFile; fileRef = A774C2F51CE41C3A00926BA2 /* UIView+M13BadgeView.m */; };
 		CA08ED4E18B5898100A7FD9B /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CA08ED4D18B5898100A7FD9B /* Foundation.framework */; };
 		CA08ED5218B5898100A7FD9B /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CA08ED5118B5898100A7FD9B /* UIKit.framework */; };
 		CA08ED5818B5898100A7FD9B /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = CA08ED5618B5898100A7FD9B /* InfoPlist.strings */; };
@@ -36,6 +37,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		A774C2F51CE41C3A00926BA2 /* UIView+M13BadgeView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "UIView+M13BadgeView.m"; path = "Classes/UIView+M13BadgeView.m"; sourceTree = SOURCE_ROOT; };
+		A774C2F61CE41C3A00926BA2 /* UIView+M13BadgeView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "UIView+M13BadgeView.h"; path = "Classes/UIView+M13BadgeView.h"; sourceTree = SOURCE_ROOT; };
 		CA08ED4A18B5898100A7FD9B /* M13BadgeView.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = M13BadgeView.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CA08ED4D18B5898100A7FD9B /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		CA08ED5118B5898100A7FD9B /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
@@ -162,6 +165,8 @@
 		CA08ED8518B589DC00A7FD9B /* Classes */ = {
 			isa = PBXGroup;
 			children = (
+				A774C2F61CE41C3A00926BA2 /* UIView+M13BadgeView.h */,
+				A774C2F51CE41C3A00926BA2 /* UIView+M13BadgeView.m */,
 				CA08ED8618B58A0500A7FD9B /* M13BadgeView.h */,
 				CA08ED8718B58A0500A7FD9B /* M13BadgeView.m */,
 			);
@@ -269,6 +274,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A774C2F71CE41C3A00926BA2 /* UIView+M13BadgeView.m in Sources */,
 				CA08ED8818B58A0500A7FD9B /* M13BadgeView.m in Sources */,
 				CA08ED6718B5898100A7FD9B /* ViewController.m in Sources */,
 				CA08ED5E18B5898100A7FD9B /* AppDelegate.m in Sources */,
