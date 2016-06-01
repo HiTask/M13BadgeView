@@ -27,8 +27,18 @@ typedef enum {
     M13BadgeViewVerticalAlignmentBottom
 } M13BadgeViewVerticalAlignment;
 
+@class M13BadgeView;
+
+@protocol M13BadgeViewDelegate <NSObject>
+@optional
+/**Wether to automatically update the frame or not. If no delegate is set the badge will always auto update its frame*/
+- (BOOL)badgeViewShouldAutoUpdateFrame:(M13BadgeView *)badgeView;
+@end
+
 /**A badge view similar to the standard badge for tab bar items.*/
 @interface M13BadgeView : UIView
+
+@property (nonatomic, weak) id<M13BadgeViewDelegate> delegate;
 
 /**@name Text*/
 /**The text to display in the badge.*/
